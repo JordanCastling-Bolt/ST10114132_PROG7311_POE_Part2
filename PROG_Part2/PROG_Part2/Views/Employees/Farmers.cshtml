@@ -1,0 +1,42 @@
+﻿@model IEnumerable<PROG_Part2.Models.Farmer>
+
+<table class="table">
+    <tr>
+        <th>
+            Farmer First Name
+        </th>
+        <th>
+            Farmer Surname
+        </th>
+        <th>
+            Farmer Cellphone Number
+        </th>
+        <th>
+            Farmer ID
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FarmerFName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FarmerSName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FarmerCellPhoneNum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FarmerId)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "FarmerEdit", new { id = item.FarmerId }) |
+                @Html.ActionLink("Details", "FarmerDetails", new { id = item.FarmerId }) |
+                @Html.ActionLink("Delete", "FarmerDelete", new { id = item.FarmerId })
+            </td>
+        </tr>
+    }
+
+</table>

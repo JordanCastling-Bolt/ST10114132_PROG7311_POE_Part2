@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Welcome</h2>
+
+    <a class="btn btn-outline-dark"@Html.ActionLink("Add a Farmer", "Create")</a>
+    <a class="btn btn-outline-dark"@Html.ActionLink("Farmer Products", "FarmerProducts")</a>
+
+<body>
+    @{
+        Html.RenderPartial("Farmers");
+    }
+</body>

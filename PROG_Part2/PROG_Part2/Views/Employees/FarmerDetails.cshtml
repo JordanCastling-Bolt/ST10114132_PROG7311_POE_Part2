@@ -1,0 +1,57 @@
+﻿@model PROG_Part2.Models.Farmer
+
+@{
+    ViewBag.Title = "FarmerDetails";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Farmer</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FarmerFName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FarmerFName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FarmerSName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FarmerSName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FarmerCellPhoneNum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FarmerCellPhoneNum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FarmerPassword)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FarmerPassword)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Employee.EmpName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Employee.EmpName)
+        </dd>
+        <p>@ViewBag.Message</p>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>

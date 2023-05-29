@@ -1,0 +1,21 @@
+﻿@{
+    Layout = "~/Views/Shared/_Home.cshtml";
+    ViewBag.Title = "Welcome";
+}
+
+<main>
+    <section class="row" aria-labelledby="aspnetTitle">
+        <h1 id="title">Farm Central</h1>
+        <p class="lead">The Stock Management System that meets all your inventory needs</p>  
+    </section>
+
+    <div class="row">
+        <section class="col-md-4" aria-labelledby="gettingStartedTitle">
+            <h2 id="gettingStartedTitle">Getting started</h2>
+            <p>
+                If you are a registered Farmer or Farm Cenral Employee, you can login to the system using the button below.
+            </p>
+            <p><a class="btn btn-outline-dark"@Html.ActionLink("Login", "Login")</a></p>
+        </section>
+    </div>
+</main>

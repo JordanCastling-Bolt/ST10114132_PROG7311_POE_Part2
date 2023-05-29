@@ -1,0 +1,46 @@
+﻿@model IEnumerable<PROG_Part2.Models.Product>
+
+@{
+    Layout = "~/Views/Shared/_Farmer.cshtml";
+    ViewBag.Title = "Index";
+}
+
+<h2>Your Products</h2>
+
+<a class="btn btn-outline-dark"@Html.ActionLink("Create New Product", "Create")</a>
+
+<table class="table">
+    <tr>
+        <th>
+            Product Name
+        </th>
+        <th>
+            Product Type
+        </th>
+        <th>
+            Date Supplied
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateSupplied)
+            </td>
+            <td>
+                <button>@Html.ActionLink("Edit", "Edit", new { id = item.ProductId })</button>
+                <button>@Html.ActionLink("Details", "Details", new { id = item.ProductId })</button>
+                <button>@Html.ActionLink("Delete", "Delete", new { id = item.ProductId })</button>
+            </td>
+        </tr>
+    }
+
+</table>
