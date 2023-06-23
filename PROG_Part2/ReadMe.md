@@ -3,6 +3,8 @@ Student Number: ST10114132
 Date: 29/05/2023
 PROG7311 POE Part 2
 
+Github Repository - https://github.com/JordanCastling-Bolt/ST10114132_PROG7311_POE_Part2.git
+
 ***************************************
 Farm Central Stock Management Prototype
 ***************************************
